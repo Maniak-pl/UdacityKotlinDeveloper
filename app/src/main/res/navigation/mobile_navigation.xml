@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="pl.maniak.androidkotlindeveloper.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_aboutMeFragment"
+            app:destination="@id/aboutMeFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_colorMyViewsFragment"
+            app:destination="@id/colorMyViewsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="pl.maniak.androidkotlindeveloper.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="pl.maniak.androidkotlindeveloper.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/aboutMeFragment"
+        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.aboutme.AboutMeFragment"
+        android:label="AboutMeFragment"
+        tools:layout="@layout/fragment_about_me"/>
+    <fragment
+        android:id="@+id/colorMyViewsFragment"
+        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.color.ColorMyViewsFragment"
+        android:label="FragmentColorMyViews"
+        tools:layout="@layout/fragment_color_my_views"
+        />
+</navigation>
