@@ -16,7 +16,12 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    // Lesson 02:02
+    <style name="HomeButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    // Lesson 2.2
     <style name="NameStyle">
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:paddingTop">@dimen/small_padding</item>
@@ -25,9 +30,15 @@
         <item name="android:layout_marginTop">@dimen/layout_margin</item>
     </style>
 
-    <style name="HomeButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    // Lesson 2.3
+    <style name="WhiteBox">
+        <item name="android:background">@android:color/holo_green_light</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/box_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/roboto</item>
     </style>
+
 
 </resources>

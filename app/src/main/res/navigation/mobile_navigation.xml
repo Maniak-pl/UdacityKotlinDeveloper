@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/colorMyViewsFragment"
         android:name="pl.maniak.androidkotlindeveloper.ui.udacity.color.ColorMyViewsFragment"
-        android:label="FragmentColorMyViews"
+        android:label="@string/title_lesson_2.3"
         tools:layout="@layout/fragment_color_my_views"
         />
 </navigation>
