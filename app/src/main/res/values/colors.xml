@@ -3,4 +3,10 @@
     <color name="colorPrimary">#000</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#F61B1B</color>
+
+    // Lesson 2.3
+    <color name="my_green">#12C700</color>
+    <color name="my_red">#E54304</color>
+    <color name="my_yellow">#FFC107</color>
+
 </resources>
