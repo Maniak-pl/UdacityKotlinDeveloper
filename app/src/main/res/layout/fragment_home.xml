@@ -9,7 +9,7 @@
         tools:context=".ui.home.HomeFragment">
 
         <Button
-            android:id="@+id/homeApp02Btn"
+            android:id="@+id/homeApp02"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,6 +25,14 @@
             android:text="@string/app_title_03"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeApp02Btn" />
+            app:layout_constraintTop_toBottomOf="@id/homeApp02" />
+
+        <Button
+            android:id="@+id/homeApp04"
+            style="@style/HomeButton"
+            android:text="@string/app_title_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeApp03" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

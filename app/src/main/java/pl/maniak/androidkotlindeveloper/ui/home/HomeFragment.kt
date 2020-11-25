@@ -1,5 +1,6 @@
 package pl.maniak.androidkotlindeveloper.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.FragmentHomeBinding
+import pl.maniak.androidkotlindeveloper.ui.udacity.trivia.TriviaActivity
 
 class HomeFragment : Fragment() {
 
@@ -27,8 +29,9 @@ class HomeFragment : Fragment() {
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.apply {
-            homeApp02Btn.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_aboutMeFragment) }
+            homeApp02.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_aboutMeFragment) }
             homeApp03.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_colorMyViewsFragment) }
+            homeApp04.setOnClickListener { startActivity(Intent(requireContext(), TriviaActivity::class.java)) }
         }
         return binding.root
     }
