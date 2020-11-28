@@ -34,5 +34,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/homeApp03" />
+
+        <Button
+            android:id="@+id/homeApp05"
+            style="@style/HomeButton"
+            android:text="@string/app_title_05"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeApp04" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -33,7 +33,7 @@ class GameWonFragment : Fragment() {
 
     private fun getShareIntent() : Intent {
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
-        return ShareCompat.IntentBuilder.from(activity!!)
+        return ShareCompat.IntentBuilder.from(requireActivity())
                 .setText(getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
                 .setType("text/plain")
                 .intent

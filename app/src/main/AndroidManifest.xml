@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".ui.udacity.trivia.TriviaActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
+        <activity android:name=".ui.udacity.dessertpusher.DessertPusherActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
     </application>
 
 </manifest>
