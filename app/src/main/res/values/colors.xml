@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000</color>
-    <color name="colorPrimaryDark">#000</color>
+    <color name="colorPrimary">@color/black</color>
+    <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">#F61B1B</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
 
     // Lesson 2.3
     <color name="my_green">#12C700</color>
@@ -15,7 +21,5 @@
     <color name="gameOverBackground">#f8bbd0</color>
 
     // Lesson 2.5
-    <color name="white">#ffffff</color>
-    <color name="green">#6ab343</color>
     <color name="grey">#99000000</color>
 </resources>

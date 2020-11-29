@@ -20,6 +20,7 @@
     <string name="app_title_03">Udacity - App \"ColorMyViews\"</string>
     <string name="app_title_04">Udacity - App \"Trivia\"</string>
     <string name="app_title_05">Udacity - App \"Desert Pusher\"</string>
+    <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     // Lesson 2.2
     <string name="app_name_about_me">About Me</string>

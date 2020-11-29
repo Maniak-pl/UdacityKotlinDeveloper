@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_nav_home_to_colorMyViewsFragment"
             app:destination="@id/colorMyViewsFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_constraintLayoutFragment"
+            app:destination="@id/constraintLayoutFragment" />
     </fragment>
 
     <fragment
@@ -40,4 +43,9 @@
         android:label="@string/title_lesson_2.3"
         tools:layout="@layout/fragment_color_my_views"
         />
+    <fragment
+        android:id="@+id/constraintLayoutFragment"
+        android:name="pl.maniak.androidkotlindeveloper.ui.corelogic.ConstraintLayoutFragment"
+        android:label="ConstraintLayoutFragment"
+        tools:layout="@layout/fragment_constraint_layout"/>
 </navigation>

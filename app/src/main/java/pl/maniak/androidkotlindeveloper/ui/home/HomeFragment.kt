@@ -28,10 +28,11 @@ class HomeFragment : Fragment() {
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.apply {
-            homeApp02.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_aboutMeFragment) }
-            homeApp03.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_colorMyViewsFragment) }
-            homeApp04.setOnClickListener { startActivity(Intent(requireContext(), TriviaActivity::class.java)) }
-            homeApp05.setOnClickListener { startActivity(Intent(requireContext(), DessertPusherActivity::class.java)) }
+            homeAppU02.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_aboutMeFragment) }
+            homeAppU03.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_colorMyViewsFragment) }
+            homeAppU04.setOnClickListener { startActivity(Intent(requireContext(), TriviaActivity::class.java)) }
+            homeAppU05.setOnClickListener { startActivity(Intent(requireContext(), DessertPusherActivity::class.java)) }
+            homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root
     }

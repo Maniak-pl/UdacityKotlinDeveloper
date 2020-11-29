@@ -19,6 +19,7 @@
     <style name="HomeButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     // Lesson 2.2
@@ -38,6 +39,42 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    // Lesson C1.1
+    <style name="HeadlineText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ChainsText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/blue</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ChainsText.A">
+        <item name="android:background">@color/red</item>
+        <item name="android:text">A</item>
+    </style>
+
+    <style name="ChainsText.B">
+        <item name="android:background">@color/green</item>
+        <item name="android:text">B</item>
+    </style>
+
+    <style name="ChainsText.C">
+        <item name="android:background">@color/blue</item>
+        <item name="android:text">C</item>
     </style>
 
 

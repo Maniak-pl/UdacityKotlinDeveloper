@@ -9,7 +9,7 @@
         tools:context=".ui.home.HomeFragment">
 
         <Button
-            android:id="@+id/homeApp02"
+            android:id="@+id/homeAppU02"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,27 +20,35 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/homeApp03"
+            android:id="@+id/homeAppU03"
             style="@style/HomeButton"
             android:text="@string/app_title_03"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeApp02" />
+            app:layout_constraintTop_toBottomOf="@id/homeAppU02" />
 
         <Button
-            android:id="@+id/homeApp04"
+            android:id="@+id/homeAppU04"
             style="@style/HomeButton"
             android:text="@string/app_title_04"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeApp03" />
+            app:layout_constraintTop_toBottomOf="@id/homeAppU03" />
 
         <Button
-            android:id="@+id/homeApp05"
+            android:id="@+id/homeAppU05"
             style="@style/HomeButton"
             android:text="@string/app_title_05"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeApp04" />
+            app:layout_constraintTop_toBottomOf="@id/homeAppU04" />
+
+        <Button
+            android:id="@+id/homeAppC01"
+            style="@style/HomeButton"
+            android:text="@string/app_title_C01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeAppU05" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
