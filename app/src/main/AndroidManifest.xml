@@ -24,6 +24,8 @@
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
         <activity android:name=".ui.udacity.dessertpusher.DessertPusherActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
+        <activity android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
     </application>
 
 </manifest>

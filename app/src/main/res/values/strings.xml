@@ -20,6 +20,7 @@
     <string name="app_title_03">Udacity - App \"ColorMyViews\"</string>
     <string name="app_title_04">Udacity - App \"Trivia\"</string>
     <string name="app_title_05">Udacity - App \"Desert Pusher\"</string>
+    <string name="app_title_06">Udacity - App \"Guess the Word\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     // Lesson 2.2
@@ -77,5 +78,20 @@
     <string name="zero">0</string>
     <string name="dessert_sold">Desserts Sold</string>
     <string name="share_text">I\'ve clicked %1$d Desserts for a total of %2$d$ #AndroidDessertClicker</string>
+
+    // Lesson U2.6
+
+    <string name="title_lesson_2.6">Guess the Word</string>
+    <string name="skip">Skip</string>
+    <string name="play_again">Play Again</string>
+    <string name="you_scored">You Scored</string>
+    <string name="title_text">guess the word!</string>
+    <string name="play_button">Play</string>
+    <string name="get_ready">Get ready to</string>
+    <string name="got_it">Got it</string>
+    <string name="word_is">The word is…</string>
+    <string name="quote_format">\"%s\"</string>
+    <string name="score_format">Current Score: %d</string>
+
 
 </resources>

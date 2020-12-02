@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.FragmentHomeBinding
 import pl.maniak.androidkotlindeveloper.ui.udacity.dessertpusher.DessertPusherActivity
+import pl.maniak.androidkotlindeveloper.ui.udacity.guesstheword.GuessTheWordActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.trivia.TriviaActivity
 
 class HomeFragment : Fragment() {
@@ -32,6 +33,7 @@ class HomeFragment : Fragment() {
             homeAppU03.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_colorMyViewsFragment) }
             homeAppU04.setOnClickListener { startActivity(Intent(requireContext(), TriviaActivity::class.java)) }
             homeAppU05.setOnClickListener { startActivity(Intent(requireContext(), DessertPusherActivity::class.java)) }
+            homeAppU06.setOnClickListener { startActivity(Intent(requireContext(), GuessTheWordActivity::class.java)) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root
