@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.GameFragmentBinding
-import timber.log.Timber
 
 /**
  * Fragment where the game is played
@@ -38,16 +38,19 @@ class GameFragment : Fragment() {
 
         binding.correctButton.setOnClickListener {
             viewModel.onCorrect()
-            updateScoreText()
-            updateWordText()
         }
         binding.skipButton.setOnClickListener {
             viewModel.onSkip()
-            updateScoreText()
-            updateWordText()
         }
-        updateScoreText()
-        updateWordText()
+
+        viewModel.score.observe(viewLifecycleOwner, Observer {
+            binding.scoreText.text = it.toString()
+        })
+
+        viewModel.word.observe(viewLifecycleOwner, Observer {
+            binding.wordText.text = it
+        })
+
         return binding.root
     }
 
@@ -56,17 +59,7 @@ class GameFragment : Fragment() {
      */
     private fun gameFinished() {
         val action = GameFragmentDirections.actionGameToScore()
+        action.score = viewModel.score.value ?: 0
         findNavController(this).navigate(action)
-    }
-
-    /** Methods for updating the UI **/
-
-    private fun updateWordText() {
-        binding.wordText.text = viewModel.word
-
-    }
-
-    private fun updateScoreText() {
-        binding.scoreText.text = viewModel.score.toString()
     }
 }
