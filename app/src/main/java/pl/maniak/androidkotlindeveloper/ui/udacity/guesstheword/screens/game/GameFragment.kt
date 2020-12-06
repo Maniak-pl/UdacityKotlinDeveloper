@@ -51,6 +51,14 @@ class GameFragment : Fragment() {
             binding.wordText.text = it
         })
 
+        // Sets up event listening to navigate the player when the game is finished
+        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { isFinished ->
+            if(isFinished) {
+                gameFinished()
+            }
+        })
+
+
         return binding.root
     }
 
@@ -61,5 +69,6 @@ class GameFragment : Fragment() {
         val action = GameFragmentDirections.actionGameToScore()
         action.score = viewModel.score.value ?: 0
         findNavController(this).navigate(action)
+        viewModel.onGameFinishComplete()
     }
 }
