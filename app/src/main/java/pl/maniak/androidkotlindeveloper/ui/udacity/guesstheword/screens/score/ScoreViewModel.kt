@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ScoreViewModel(private val finalScore: Int) : ViewModel() {
+class ScoreViewModel(finalScore: Int) : ViewModel() {
 
     private val _eventPlayAgain = MutableLiveData<Boolean>()
     val eventPlayAgain: LiveData<Boolean>
