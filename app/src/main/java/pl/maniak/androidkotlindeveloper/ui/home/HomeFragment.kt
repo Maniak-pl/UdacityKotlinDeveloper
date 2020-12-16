@@ -7,12 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.FragmentHomeBinding
 import pl.maniak.androidkotlindeveloper.ui.udacity.dessertpusher.DessertPusherActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.guesstheword.GuessTheWordActivity
+import pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.SleepQualityActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.trivia.TriviaActivity
 
 class HomeFragment : Fragment() {
@@ -25,8 +26,8 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.apply {
             homeAppU02.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_aboutMeFragment) }
@@ -34,6 +35,7 @@ class HomeFragment : Fragment() {
             homeAppU04.setOnClickListener { startActivity(Intent(requireContext(), TriviaActivity::class.java)) }
             homeAppU05.setOnClickListener { startActivity(Intent(requireContext(), DessertPusherActivity::class.java)) }
             homeAppU06.setOnClickListener { startActivity(Intent(requireContext(), GuessTheWordActivity::class.java)) }
+            homeAppU07.setOnClickListener { startActivity(Intent(requireContext(), SleepQualityActivity::class.java)) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root

@@ -1,62 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.home.HomeFragment">
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/homeAppU02"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/app_title_02"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:context=".ui.home.HomeFragment">
 
-        <Button
-            android:id="@+id/homeAppU03"
-            style="@style/HomeButton"
-            android:text="@string/app_title_03"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeAppU02" />
+            <Button
+                android:id="@+id/homeAppU02"
+                style="@style/HomeButton"
+                android:layout_marginTop="16dp"
+                android:text="@string/app_title_02" />
 
-        <Button
-            android:id="@+id/homeAppU04"
-            style="@style/HomeButton"
-            android:text="@string/app_title_04"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeAppU03" />
+            <Button
+                android:id="@+id/homeAppU03"
+                style="@style/HomeButton"
+                android:text="@string/app_title_03" />
 
-        <Button
-            android:id="@+id/homeAppU05"
-            style="@style/HomeButton"
-            android:text="@string/app_title_05"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeAppU04" />
+            <Button
+                android:id="@+id/homeAppU04"
+                style="@style/HomeButton"
+                android:text="@string/app_title_04" />
 
-        <Button
-            android:id="@+id/homeAppU06"
-            style="@style/HomeButton"
-            android:text="@string/app_title_06"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeAppU05" />
+            <Button
+                android:id="@+id/homeAppU05"
+                style="@style/HomeButton"
+                android:text="@string/app_title_05" />
 
-        <Button
-            android:id="@+id/homeAppC01"
-            style="@style/HomeButton"
-            android:text="@string/app_title_C01"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeAppU06" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/homeAppU06"
+                style="@style/HomeButton"
+                android:text="@string/app_title_06" />
+
+            <Button
+                android:id="@+id/homeAppU07"
+                style="@style/HomeButton"
+                android:text="@string/app_title_07" />
+
+            <Button
+                android:id="@+id/homeAppC01"
+                style="@style/HomeButton"
+                android:text="@string/app_title_C01" />
+        </LinearLayout>
+    </ScrollView>
 </layout>

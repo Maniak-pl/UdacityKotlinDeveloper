@@ -26,6 +26,10 @@
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
         <activity android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
+        <activity android:name=".ui.udacity.trackmysleepquality.SleepQualityActivity"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
