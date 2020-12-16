@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pl.maniak.androidkotlindeveloper">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -25,7 +27,8 @@
         <activity android:name=".ui.udacity.dessertpusher.DessertPusherActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
         <activity android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"/>
         <activity android:name=".ui.udacity.trackmysleepquality.SleepQualityActivity"/>
         <meta-data
             android:name="preloaded_fonts"
