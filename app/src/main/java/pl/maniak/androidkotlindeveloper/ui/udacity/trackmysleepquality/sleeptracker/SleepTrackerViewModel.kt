@@ -1,10 +1,7 @@
 package pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.sleeptracker
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import kotlinx.coroutines.launch
 import pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.database.SleepDatabaseDao
 import pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.database.SleepNight
@@ -30,6 +27,29 @@ class SleepTrackerViewModel(
 
     init {
         initializeTonight()
+    }
+
+    /**
+     * Variable that tells the Fragment to navigate to a specific [SleepQualityFragment]
+     *
+     * This is private because we don't want to expose setting this value to the Fragment.
+     */
+    private val _navigateToSleepQuality = MutableLiveData<SleepNight>()
+
+    /**
+     * If this is non-null, immediately navigate to [SleepQualityFragment] and call [doneNavigating]
+     */
+    val navigateToSleepQuality: LiveData<SleepNight>
+        get() = _navigateToSleepQuality
+
+    /**
+     * Call this immediately after navigating to [SleepQualityFragment]
+     *
+     * It will clear the navigation request, so if the user rotates their phone it won't navigate
+     * twice.
+     */
+    fun doneNavigating() {
+        _navigateToSleepQuality.value = null
     }
 
     private fun initializeTonight() {
@@ -84,6 +104,9 @@ class SleepTrackerViewModel(
             // Update the night in the database to add the end time.
             oldNight.endTimeMilli = System.currentTimeMillis()
             update(oldNight)
+
+            // Set state to navigate to the SleepQualityFragment.
+            _navigateToSleepQuality.value = oldNight
         }
     }
 

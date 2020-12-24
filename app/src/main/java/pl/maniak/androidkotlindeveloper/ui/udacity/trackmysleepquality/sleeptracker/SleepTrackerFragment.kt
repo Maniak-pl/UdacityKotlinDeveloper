@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.FragmentSleepTrackerBinding
 import pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.database.SleepDatabase
@@ -45,6 +47,18 @@ class SleepTrackerFragment : Fragment() {
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
         binding.lifecycleOwner = this
+
+        // Add an Observer on the state variable for Navigating when STOP button is pressed.
+        sleepTrackerViewModel.navigateToSleepQuality.observe(viewLifecycleOwner, Observer { night ->
+            night?.let {
+                this.findNavController().navigate(
+                    SleepTrackerFragmentDirections
+                        .actionSleepTrackerFragmentToSleepQualityFragment(night.nightId))
+                // Reset state to make sure we only navigate once, even if the device
+                // has a configuration change.
+                sleepTrackerViewModel.doneNavigating()
+            }
+        })
 
         return binding.root
     }
