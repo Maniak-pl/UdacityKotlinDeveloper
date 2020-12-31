@@ -22,6 +22,7 @@
     <string name="app_title_05">Udacity - App \"Desert Pusher\"</string>
     <string name="app_title_06">Udacity - App \"Guess the Word\"</string>
     <string name="app_title_07">Udacity - App \"Track My Sleep Quality\"</string>
+    <string name="app_title_08">Udacity - App \"Real Estate on Mars\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     <!-- Lesson U2.2 -->
@@ -130,5 +131,15 @@
     <string name="hours_length">%d hours on %s</string>
     <string name="seconds_length">%d seconds on %s</string>
 
+    <!-- Lesson U3.2 -->
+    <string name="title_lesson_3.2">Real Estate on Mars</string>
+    <string name="show_all">Show all</string>
+    <string name="show_rent">Rent</string>
+    <string name="show_buy">Buy</string>
+    <string name="type_rent">Rent</string>
+    <string name="type_sale">Sale</string>
+    <string name="display_type">For %s</string>
+    <string name="display_price_monthly_rental">$%,.0f/month</string>
+    <string name="display_price">$%,.0f</string>
 
 </resources>

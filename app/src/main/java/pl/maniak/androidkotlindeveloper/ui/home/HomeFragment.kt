@@ -13,6 +13,7 @@ import pl.maniak.androidkotlindeveloper.R
 import pl.maniak.androidkotlindeveloper.databinding.FragmentHomeBinding
 import pl.maniak.androidkotlindeveloper.ui.udacity.dessertpusher.DessertPusherActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.guesstheword.GuessTheWordActivity
+import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.MarsRealEstateActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.SleepQualityActivity
 import pl.maniak.androidkotlindeveloper.ui.udacity.trivia.TriviaActivity
 
@@ -36,6 +37,7 @@ class HomeFragment : Fragment() {
             homeAppU05.setOnClickListener { startActivity(Intent(requireContext(), DessertPusherActivity::class.java)) }
             homeAppU06.setOnClickListener { startActivity(Intent(requireContext(), GuessTheWordActivity::class.java)) }
             homeAppU07.setOnClickListener { startActivity(Intent(requireContext(), SleepQualityActivity::class.java)) }
+            homeAppU08.setOnClickListener { startActivity(Intent(requireContext(), MarsRealEstateActivity::class.java)) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root
