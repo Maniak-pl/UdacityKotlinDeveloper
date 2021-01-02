@@ -20,9 +20,5 @@
         android:name="pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
-        <argument
-            android:name="selectedProperty"
-            app:argType="pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsProperty"
-            />
     </fragment>
 </navigation>
