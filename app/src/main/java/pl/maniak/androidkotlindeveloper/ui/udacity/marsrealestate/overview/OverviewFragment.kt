@@ -5,7 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import pl.maniak.androidkotlindeveloper.R
-import pl.maniak.androidkotlindeveloper.databinding.FragmentOverviewBinding
+import pl.maniak.androidkotlindeveloper.databinding.GridViewItemBinding
 
 
 class OverviewFragment : Fragment() {
@@ -17,8 +17,8 @@ class OverviewFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val binding = FragmentOverviewBinding.inflate(inflater)
+    ): View {
+        val binding = GridViewItemBinding.inflate(inflater)
 
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
         binding.lifecycleOwner = this
