@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import pl.maniak.androidkotlindeveloper.databinding.GridViewItemBinding
 import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsProperty
 
-class PhotoGridAdapter :
+class PhotoGridAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<MarsProperty, PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
 
     companion object DiffCallback : DiffUtil.ItemCallback<MarsProperty>() {
@@ -31,6 +31,9 @@ class PhotoGridAdapter :
 
     override fun onBindViewHolder(holder: PhotoGridAdapter.MarsPropertyViewHolder, position: Int) {
         val marsProperty = getItem(position)
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(marsProperty)
+        }
         holder.bind(marsProperty)
     }
 
@@ -39,5 +42,9 @@ class PhotoGridAdapter :
             binding.property = marsProperty
             binding.executePendingBindings()
         }
+    }
+
+    class OnClickListener(val clickListener: (marsProperty:MarsProperty) -> Unit) {
+        fun onClick(marsProperty: MarsProperty) = clickListener(marsProperty)
     }
 }
