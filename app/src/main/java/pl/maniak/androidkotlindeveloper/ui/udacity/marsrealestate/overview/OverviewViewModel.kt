@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsApi
+import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsApiFilter
 import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsProperty
 
 enum class MarsApiStatus { LOADING, ERROR, DONE }
@@ -34,18 +35,18 @@ class OverviewViewModel : ViewModel() {
      * Call getMarsRealEstateProperties() on init so we can display status immediately.
      */
     init {
-        getMarsRealEstateProperties()
+        getMarsRealEstateProperties(MarsApiFilter.SHOW_ALL)
     }
 
     /**
      * Sets the value of the response LiveData to the Mars API status or the successful number of
      * Mars properties retrieved.
      */
-    private fun getMarsRealEstateProperties() {
+    private fun getMarsRealEstateProperties(filter: MarsApiFilter) {
         viewModelScope.launch {
             try {
                 _status.value = MarsApiStatus.LOADING
-                val listResult = MarsApi.retrofitService.getProperties()
+                val listResult = MarsApi.retrofitService.getProperties(filter.value)
                 _status.value = MarsApiStatus.DONE
                 _properties.value = listResult
             } catch (e: Exception) {
@@ -61,5 +62,9 @@ class OverviewViewModel : ViewModel() {
 
     fun displayPropertyDetailsComplete() {
         _navigateToSelectedProperty.value = null
+    }
+
+    fun updateFilter(filter: MarsApiFilter) {
+        getMarsRealEstateProperties(filter)
     }
 }
