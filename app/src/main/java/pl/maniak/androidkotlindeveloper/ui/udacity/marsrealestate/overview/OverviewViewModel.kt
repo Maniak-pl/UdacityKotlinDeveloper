@@ -8,16 +8,18 @@ import kotlinx.coroutines.launch
 import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsApi
 import pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.network.MarsProperty
 
+enum class MarsApiStatus { LOADING, ERROR, DONE }
+
 /**
  * The [ViewModel] that is attached to the [OverviewFragment].
  */
 class OverviewViewModel : ViewModel() {
 
     // The internal MutableLiveData String that stores the most recent response
-    private val _status = MutableLiveData<String>()
+    private val _status = MutableLiveData<MarsApiStatus>()
 
     // The external immutable LiveData for the response String
-    val status: LiveData<String>
+    val status: LiveData<MarsApiStatus>
         get() = _status
 
     private val _properties = MutableLiveData<List<MarsProperty>>()
@@ -38,12 +40,13 @@ class OverviewViewModel : ViewModel() {
     private fun getMarsRealEstateProperties() {
         viewModelScope.launch {
             try {
+                _status.value = MarsApiStatus.LOADING
                 val listResult = MarsApi.retrofitService.getProperties()
-                if (listResult.isNotEmpty()) {
-                    _properties.value = listResult
-                }
+                _status.value = MarsApiStatus.DONE
+                _properties.value = listResult
             } catch (e: Exception) {
-                _status.value = "Failure: ${e.message}"
+                _status.value = MarsApiStatus.ERROR
+                _properties.value = ArrayList()
             }
         }
     }
