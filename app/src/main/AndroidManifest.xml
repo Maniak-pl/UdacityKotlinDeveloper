@@ -35,6 +35,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <activity android:name=".ui.udacity.marsrealestate.MarsRealEstateActivity"/>
+        <activity android:name=".ui.udacity.devbyteviewer.ui.DevByteActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight"/>
     </application>
 
 </manifest>
