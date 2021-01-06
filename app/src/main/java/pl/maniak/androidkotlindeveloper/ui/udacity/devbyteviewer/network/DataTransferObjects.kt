@@ -1,6 +1,7 @@
 package pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.network
 
 import com.squareup.moshi.JsonClass
+import pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.database.DatabaseVideo
 import pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.domain.Video
 
 /**
@@ -45,4 +46,15 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
                 updated = it.updated,
                 thumbnail = it.thumbnail)
     }
+}
+
+fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo> {
+    return videos.map {
+        DatabaseVideo (
+            title = it.title,
+            description = it.description,
+            url = it.url,
+            updated = it.updated,
+            thumbnail = it.thumbnail)
+    }.toTypedArray()
 }
