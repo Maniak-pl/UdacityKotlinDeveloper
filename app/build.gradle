@@ -90,4 +90,7 @@ dependencies {
 
     // WorkManager
     implementation "android.arch.work:work-runtime-ktx:1.0.1"
+
+    // Client for retrieving location
+    implementation "com.google.android.gms:play-services-location:17.1.0"
 }
