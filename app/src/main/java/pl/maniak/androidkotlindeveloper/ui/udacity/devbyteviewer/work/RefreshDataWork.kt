@@ -10,6 +10,10 @@ import pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.repository.Vide
 class RefreshDataWorker(appContext: Context, params: WorkerParameters) :
     CoroutineWorker(appContext, params) {
 
+    companion object {
+        const val WORK_NAME = "RefreshDataWorker"
+    }
+
     /**
      * A coroutine-friendly method to do your work.
      */
