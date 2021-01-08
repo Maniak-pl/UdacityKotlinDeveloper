@@ -3,4 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/roboto</item>
     </array>
+    <array name="gdg_preloaded_fonts" translatable="false">
+        <item>@font/lobster_two</item>
+    </array>
 </resources>
