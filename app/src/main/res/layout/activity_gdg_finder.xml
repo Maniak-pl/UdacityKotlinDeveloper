@@ -24,7 +24,7 @@
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/title_lesson_3.4"
-                    app:tint="?colorOnPrimary"
+                    app:tint="?colorOnSecondary"
                     app:srcCompat="@drawable/logo" />
             </androidx.appcompat.widget.Toolbar>
 
