@@ -100,7 +100,7 @@
     </style>
 
     <!-- Lesson U3.4 -->
-    <style name="GdgFinderTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="GdgFinderTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
