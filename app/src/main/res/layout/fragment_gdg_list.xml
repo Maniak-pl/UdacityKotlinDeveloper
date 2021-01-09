@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.search.GdgListViewModel" />
+            type="pl.maniak.developer.ui.udacity.gdgfinder.search.GdgListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 app:singleSelection="true"
                 app:singleLine="true"
-                android:padding="@dimen/spacing_normal"/>
+                android:padding="@dimen/spacing_normal" />
         </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView

@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.detail.DetailViewModel" />
+            type="pl.maniak.developer.ui.udacity.marsrealestate.detail.DetailViewModel" />
     </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

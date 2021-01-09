@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.maniak.androidkotlindeveloper">
+    package="pl.maniak.developer">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".App"
@@ -24,21 +24,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.udacity.trivia.TriviaActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
-        <activity android:name=".ui.udacity.dessertpusher.DessertPusherActivity"
-            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout"/>
-        <activity android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
+        <activity
+            android:name=".ui.udacity.trivia.TriviaActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" />
+        <activity
+            android:name=".ui.udacity.dessertpusher.DessertPusherActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" />
+        <activity
+            android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="landscape"/>
-        <activity android:name=".ui.udacity.trackmysleepquality.SleepQualityActivity"/>
+            android:screenOrientation="landscape" />
+        <activity android:name="pl.maniak.developer.ui.udacity.trackmysleepquality.SleepQualityActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <activity android:name=".ui.udacity.marsrealestate.MarsRealEstateActivity"/>
-        <activity android:name=".ui.udacity.devbyteviewer.ui.DevByteActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight"/>
-        <activity android:name=".ui.udacity.gdgfinder.GdgFinderActivity"
+
+        <activity android:name=".ui.udacity.marsrealestate.MarsRealEstateActivity" />
+        <activity
+            android:name=".ui.udacity.devbyteviewer.ui.DevByteActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight" />
+        <activity
+            android:name=".ui.udacity.gdgfinder.GdgFinderActivity"
             android:theme="@style/GdgFinderTheme">
             <meta-data
                 android:name="preloaded_fonts"

@@ -5,9 +5,10 @@
     tools:context=".ui.DevByteFragment">
 
     <data>
+
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.viewmodels.DevByteViewModel" />
+            type="pl.maniak.developer.ui.udacity.devbyteviewer.viewmodels.DevByteViewModel" />
     </data>
 
     <FrameLayout

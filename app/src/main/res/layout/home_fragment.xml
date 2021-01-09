@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.home.HomeViewModel" />
+            type="pl.maniak.developer.ui.udacity.gdgfinder.home.HomeViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

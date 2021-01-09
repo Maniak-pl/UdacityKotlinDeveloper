@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.marsrealestate.overview.OverviewViewModel" />
+            type="pl.maniak.developer.ui.udacity.marsrealestate.overview.OverviewViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

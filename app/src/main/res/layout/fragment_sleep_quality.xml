@@ -10,7 +10,7 @@
 
         <variable
             name="sleepQualityViewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.sleepquality.SleepQualityViewModel" />
+            type="pl.maniak.developer.ui.udacity.trackmysleepquality.sleepquality.SleepQualityViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->

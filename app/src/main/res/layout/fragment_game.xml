@@ -8,7 +8,7 @@
 
         <variable
             name="game"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.trivia.GameFragment" />
+            type="pl.maniak.developer.ui.udacity.trivia.GameFragment" />
     </data>
 
     <ScrollView

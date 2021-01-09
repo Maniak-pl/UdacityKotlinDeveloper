@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="gameViewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.guesstheword.screens.game.GameViewModel" />
+            type="pl.maniak.developer.ui.udacity.guesstheword.screens.game.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

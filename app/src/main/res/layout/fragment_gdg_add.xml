@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.add.AddGdgViewModel" />
+            type="pl.maniak.developer.ui.udacity.gdgfinder.add.AddGdgViewModel" />
     </data>
 
     <ScrollView

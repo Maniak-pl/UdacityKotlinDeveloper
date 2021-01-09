@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="scoreViewModel"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.guesstheword.screens.score.ScoreViewModel" />
+            type="pl.maniak.developer.ui.udacity.guesstheword.screens.score.ScoreViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

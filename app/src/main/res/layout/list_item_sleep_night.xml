@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="sleep"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.database.SleepNight" />
+            type="pl.maniak.developer.ui.udacity.trackmysleepquality.database.SleepNight" />
+
         <variable
             name="clickListener"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.trackmysleepquality.sleeptracker.SleepNightListener" />
+            type="pl.maniak.developer.ui.udacity.trackmysleepquality.sleeptracker.SleepNightListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

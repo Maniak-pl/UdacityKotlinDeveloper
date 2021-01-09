@@ -6,12 +6,12 @@
 
     <fragment
         android:id="@+id/gdg_search"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.search.GdgListFragment"
+        android:name="pl.maniak.developer.ui.udacity.gdgfinder.search.GdgListFragment"
         android:label="GDG Search"
-        tools:layout="@layout/fragment_gdg_list"/>
+        tools:layout="@layout/fragment_gdg_list" />
     <fragment
         android:id="@+id/home"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.home.HomeFragment"
+        android:name="pl.maniak.developer.ui.udacity.gdgfinder.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/home_fragment">
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/gdg_apply"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.add.AddGdgFragment"
+        android:name="pl.maniak.developer.ui.udacity.gdgfinder.add.AddGdgFragment"
         android:label="Apply"
         tools:layout="@layout/fragment_gdg_add" />
 

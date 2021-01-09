@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/devByte"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.ui.DevByteFragment"
+        android:name="pl.maniak.developer.ui.udacity.devbyteviewer.ui.DevByteFragment"
         android:label="fragment_dev_byte"
         tools:layout="@layout/fragment_dev_byte" />
 </navigation>

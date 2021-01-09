@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="pl.maniak.androidkotlindeveloper.ui.home.HomeFragment"
+        android:name="pl.maniak.developer.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_nav_home_to_aboutMeFragment"
             app:destination="@id/aboutMeFragment" />
@@ -23,29 +23,28 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="pl.maniak.androidkotlindeveloper.ui.gallery.GalleryFragment"
+        android:name="pl.maniak.developer.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="pl.maniak.androidkotlindeveloper.ui.slideshow.SlideshowFragment"
+        android:name="pl.maniak.developer.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/aboutMeFragment"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.aboutme.AboutMeFragment"
+        android:name="pl.maniak.developer.ui.udacity.aboutme.AboutMeFragment"
         android:label="AboutMeFragment"
-        tools:layout="@layout/fragment_about_me"/>
+        tools:layout="@layout/fragment_about_me" />
     <fragment
         android:id="@+id/colorMyViewsFragment"
-        android:name="pl.maniak.androidkotlindeveloper.ui.udacity.color.ColorMyViewsFragment"
+        android:name="pl.maniak.developer.ui.udacity.color.ColorMyViewsFragment"
         android:label="@string/title_lesson_2.3"
-        tools:layout="@layout/fragment_color_my_views"
-        />
+        tools:layout="@layout/fragment_color_my_views" />
     <fragment
         android:id="@+id/constraintLayoutFragment"
-        android:name="pl.maniak.androidkotlindeveloper.ui.corelogic.ConstraintLayoutFragment"
+        android:name="pl.maniak.developer.ui.corelogic.ConstraintLayoutFragment"
         android:label="ConstraintLayoutFragment"
-        tools:layout="@layout/fragment_constraint_layout"/>
+        tools:layout="@layout/fragment_constraint_layout" />
 </navigation>

@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="video"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.domain.Video" />
+            type="pl.maniak.developer.ui.udacity.devbyteviewer.domain.Video" />
 
         <variable
             name="videoCallback"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.devbyteviewer.ui.VideoClick" />
+            type="pl.maniak.developer.ui.udacity.devbyteviewer.ui.VideoClick" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

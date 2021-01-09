@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
 apply plugin: 'androidx.navigation.safeargs'
 
 android {
@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "pl.maniak.androidkotlindeveloper"
+        applicationId "pl.maniak.developer"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

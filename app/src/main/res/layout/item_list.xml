@@ -9,11 +9,11 @@
 
         <variable
             name="chapter"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.network.GdgChapter" />
+            type="pl.maniak.developer.ui.udacity.gdgfinder.network.GdgChapter" />
 
         <variable
             name="clickListener"
-            type="pl.maniak.androidkotlindeveloper.ui.udacity.gdgfinder.search.GdgClickListener" />
+            type="pl.maniak.developer.ui.udacity.gdgfinder.search.GdgClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
