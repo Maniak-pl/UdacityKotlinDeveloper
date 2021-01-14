@@ -51,6 +51,18 @@
                 android:name="preloaded_fonts"
                 android:resource="@array/gdg_preloaded_fonts" />
         </activity>
+        <activity android:name=".ui.udacity.eggtimernotifications.EggTimerActivity"/>
+
+        <receiver
+            android:name=".ui.udacity.eggtimernotifications.receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+        </receiver>
+        <receiver
+            android:name=".ui.udacity.eggtimernotifications.receiver.SnoozeReceiver"
+            android:enabled="true"
+            android:exported="false">
+        </receiver>
     </application>
 
 </manifest>

@@ -13,6 +13,7 @@ import pl.maniak.developer.R
 import pl.maniak.developer.databinding.FragmentHomeBinding
 import pl.maniak.developer.ui.udacity.dessertpusher.DessertPusherActivity
 import pl.maniak.developer.ui.udacity.devbyteviewer.ui.DevByteActivity
+import pl.maniak.developer.ui.udacity.eggtimernotifications.EggTimerActivity
 import pl.maniak.developer.ui.udacity.gdgfinder.GdgFinderActivity
 import pl.maniak.developer.ui.udacity.guesstheword.GuessTheWordActivity
 import pl.maniak.developer.ui.udacity.marsrealestate.MarsRealEstateActivity
@@ -42,6 +43,7 @@ class HomeFragment : Fragment() {
             homeAppU08.setOnClickListener { startActivity(MarsRealEstateActivity::class.java) }
             homeAppU09.setOnClickListener { startActivity(DevByteActivity::class.java) }
             homeAppU10.setOnClickListener { startActivity(GdgFinderActivity::class.java) }
+            homeAppU11.setOnClickListener { startActivity(EggTimerActivity::class.java) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root
