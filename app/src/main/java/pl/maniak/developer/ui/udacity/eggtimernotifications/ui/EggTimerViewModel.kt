@@ -6,10 +6,12 @@ import android.content.Intent
 import android.os.CountDownTimer
 import android.os.SystemClock
 import androidx.core.app.AlarmManagerCompat
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.*
 import kotlinx.coroutines.*
 import pl.maniak.developer.ui.udacity.eggtimernotifications.receiver.AlarmReceiver
 import pl.maniak.developer.R
+import pl.maniak.developer.ui.udacity.eggtimernotifications.util.sendNotification
 
 class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
 
@@ -89,6 +91,12 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
                 val triggerTime = SystemClock.elapsedRealtime() + selectedInterval
 
                 // TODO: Step 1.5 get an instance of NotificationManager and call sendNotification
+
+                val notificationManager = ContextCompat.getSystemService(
+                    app,
+                    NotificationManager::class.java
+                ) as NotificationManager
+                notificationManager.sendNotification(app.getString(R.string.timer_running), app)
 
                 // TODO: Step 1.15 call cancel notification
 
