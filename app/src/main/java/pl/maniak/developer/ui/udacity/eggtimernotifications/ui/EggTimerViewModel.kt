@@ -10,6 +10,8 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.*
 import pl.maniak.developer.ui.udacity.eggtimernotifications.receiver.AlarmReceiver
 import pl.maniak.developer.R
+import androidx.core.content.ContextCompat
+import pl.maniak.developer.ui.udacity.eggtimernotifications.util.cancelNotifications
 
 class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
 
@@ -89,6 +91,11 @@ class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {
                 val triggerTime = SystemClock.elapsedRealtime() + selectedInterval
 
                 // TODO: Step 1.15 call cancel notification
+                val notificationManager = ContextCompat.getSystemService(
+                    app,
+                    NotificationManager::class.java
+                ) as NotificationManager
+                notificationManager.cancelNotifications()
 
                 AlarmManagerCompat.setExactAndAllowWhileIdle(
                     alarmManager,
