@@ -8,6 +8,8 @@ import android.content.Intent
 import android.os.SystemClock
 import android.text.format.DateUtils
 import androidx.core.app.AlarmManagerCompat
+import android.app.NotificationManager
+import androidx.core.content.ContextCompat
 
 class SnoozeReceiver: BroadcastReceiver() {
     private val REQUEST_CODE = 0
@@ -29,5 +31,10 @@ class SnoozeReceiver: BroadcastReceiver() {
             triggerTime,
             notifyPendingIntent
         )
+
+        val notificationManager = ContextCompat.getSystemService(
+            context, NotificationManager::class.java
+        ) as NotificationManager
+        notificationManager.cancelAll()
     }
 }
