@@ -3,13 +3,12 @@ package pl.maniak.developer.ui.udacity.trackmysleepquality.database
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import org.junit.Assert.assertEquals
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
-import kotlin.jvm.Throws
 
 /**
  * This is not meant to be a full set of tests. For simplicity, most of your samples do not

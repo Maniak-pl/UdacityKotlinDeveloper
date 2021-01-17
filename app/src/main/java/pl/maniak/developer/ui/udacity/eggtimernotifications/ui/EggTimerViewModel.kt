@@ -1,16 +1,24 @@
 package pl.maniak.developer.ui.udacity.eggtimernotifications.ui
 
-import android.app.*
+import android.app.AlarmManager
+import android.app.Application
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.CountDownTimer
 import android.os.SystemClock
 import androidx.core.app.AlarmManagerCompat
-import androidx.lifecycle.*
-import kotlinx.coroutines.*
-import pl.maniak.developer.ui.udacity.eggtimernotifications.receiver.AlarmReceiver
-import pl.maniak.developer.R
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import pl.maniak.developer.R
+import pl.maniak.developer.ui.udacity.eggtimernotifications.receiver.AlarmReceiver
 import pl.maniak.developer.ui.udacity.eggtimernotifications.util.cancelNotifications
 
 class EggTimerViewModel(private val app: Application) : AndroidViewModel(app) {

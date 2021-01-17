@@ -9,7 +9,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.example.android.aboutme.MyName
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.FragmentAboutMeBinding
