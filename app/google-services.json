@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645546541609",
+    "project_id": "maniak-developer",
+    "storage_bucket": "maniak-developer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645546541609:android:e0e7b5aeb943428d3bd238",
+        "android_client_info": {
+          "package_name": "pl.maniak.developer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645546541609-pvj8e1k1n4f8hsjr5cp57lacd0bfju3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5vmCapwvOCGiXnthIN1-q73E9FyCTwNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645546541609-pvj8e1k1n4f8hsjr5cp57lacd0bfju3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
