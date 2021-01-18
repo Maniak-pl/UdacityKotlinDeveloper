@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.FragmentHomeBinding
+import pl.maniak.developer.ui.udacity.customfancontroller.CustomFanController
 import pl.maniak.developer.ui.udacity.dessertpusher.DessertPusherActivity
 import pl.maniak.developer.ui.udacity.devbyteviewer.ui.DevByteActivity
 import pl.maniak.developer.ui.udacity.eggtimernotifications.EggTimerActivity
@@ -44,6 +45,7 @@ class HomeFragment : Fragment() {
             homeAppU09.setOnClickListener { startActivity(DevByteActivity::class.java) }
             homeAppU10.setOnClickListener { startActivity(GdgFinderActivity::class.java) }
             homeAppU11.setOnClickListener { startActivity(EggTimerActivity::class.java) }
+            homeAppU12.setOnClickListener { startActivity(CustomFanController::class.java) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root

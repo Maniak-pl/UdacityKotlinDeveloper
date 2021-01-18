@@ -26,6 +26,7 @@
     <string name="app_title_09">Udacity - App \"DevByte Viewer\"</string>
     <string name="app_title_10">Udacity - App \"GDG Finder\"</string>
     <string name="app_title_11">Udacity - App \"Egg Timer\"</string>
+    <string name="app_title_12">Udacity - App \"Custom Fan Controller\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     <!-- Lesson U2.2 -->
@@ -206,4 +207,12 @@
     <string name="timer_running">Egg timer is running…</string>
     <string name="breakfast_notification_channel_description">Breakfast reminder</string>
     <string name="snooze">Snooze</string>
+
+    <!-- Lesson U4.2 -->
+    <string name="title_lesson_4.2">Custom Fan Controller</string>
+    <string name="fan_control">Fan Control</string>
+    <string name="fan_off">off</string>
+    <string name="fan_low">1</string>
+    <string name="fan_medium">2</string>
+    <string name="fan_high">3</string>
 </resources>

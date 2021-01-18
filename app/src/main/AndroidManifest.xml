@@ -34,7 +34,7 @@
             android:name=".ui.udacity.guesstheword.GuessTheWordActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape" />
-        <activity android:name="pl.maniak.developer.ui.udacity.trackmysleepquality.SleepQualityActivity" />
+        <activity android:name=".ui.udacity.trackmysleepquality.SleepQualityActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
@@ -89,6 +89,7 @@
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/breakfast_notification_channel_id" />
         <!-- [END fcm_default_channel] -->
+        <activity android:name=".ui.udacity.customfancontroller.CustomFanController"/>
 
     </application>
 

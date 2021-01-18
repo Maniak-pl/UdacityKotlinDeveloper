@@ -47,4 +47,10 @@
 
     <!-- Lesson U3.4 -->
     <dimen name="spacing_normal">16dp</dimen>
+
+    <!-- Lesson U4.2 -->
+    <dimen name="text_view_padding">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="margin_top">24dp</dimen>
+    <dimen name="fan_dimen">250dp</dimen>
 </resources>
