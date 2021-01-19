@@ -50,4 +50,8 @@
     <color name="secondaryDarkColor">#6b00c0</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#ffffff</color>
+
+    <!-- Lesson U4.3 -->
+    <color name="colorBackground">#FFFF5500</color>
+    <color name="colorPaint">#FFFFEB3B</color>
 </resources>

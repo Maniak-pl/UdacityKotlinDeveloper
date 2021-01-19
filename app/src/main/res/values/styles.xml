@@ -118,4 +118,7 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <!-- Lesson U3.4 -->
+    <style name="MiniPaintTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+
 </resources>
