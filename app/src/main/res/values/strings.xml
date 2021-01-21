@@ -219,4 +219,6 @@
 
     <!-- Lesson U4.3 -->
     <string name="title_lesson_4.3">Mini Paint</string>
+    <string name="canvasContentDescription">Mini Paint is a simple line drawing app.
+        Drag your fingers to draw. Rotate the phone to clear.</string>
 </resources>
