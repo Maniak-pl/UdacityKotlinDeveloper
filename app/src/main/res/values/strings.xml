@@ -225,4 +225,7 @@
 
     <!-- Lesson U4.4 -->
     <string name="title_lesson_4.4">Clipping Example</string>
+    <string name="clipping">Clipping</string>
+    <string name="translated">translated text</string>
+    <string name="skewed">"Skewed and "</string>
 </resources>
