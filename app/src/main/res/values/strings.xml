@@ -28,6 +28,7 @@
     <string name="app_title_11">Udacity - App \"Egg Timer\"</string>
     <string name="app_title_12">Udacity - App \"Custom Fan Controller\"</string>
     <string name="app_title_13">Udacity - App \"Mini Paint\"</string>
+    <string name="app_title_14">Udacity - App \"Clipping Example\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     <!-- Lesson U2.2 -->
@@ -221,4 +222,7 @@
     <string name="title_lesson_4.3">Mini Paint</string>
     <string name="canvasContentDescription">Mini Paint is a simple line drawing app.
         Drag your fingers to draw. Rotate the phone to clear.</string>
+
+    <!-- Lesson U4.4 -->
+    <string name="title_lesson_4.4">Clipping Example</string>
 </resources>

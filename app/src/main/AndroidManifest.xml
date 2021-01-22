@@ -92,6 +92,7 @@
         <activity android:name=".ui.udacity.customfancontroller.CustomFanController"/>
         <activity android:name=".ui.udacity.minipaint.MiniPaintActivity"
             android:theme="@style/MiniPaintTheme"/>
+        <activity android:name=".ui.udacity.clipping.ClippingExample"></activity>
     </application>
 
 </manifest>
