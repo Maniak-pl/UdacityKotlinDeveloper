@@ -3,9 +3,9 @@ package pl.maniak.developer.ui.udacity.clipping
 import android.content.Context
 import android.graphics.*
 import android.os.Build
-import pl.maniak.developer.R
 import android.util.AttributeSet
 import android.view.View
+import pl.maniak.developer.R
 
 class ClippedView @JvmOverloads constructor(
     context: Context,
@@ -245,6 +245,16 @@ class ClippedView @JvmOverloads constructor(
     }
 
     private fun drawSkewedTextExample(canvas: Canvas?) {
+        canvas?.save()
+        paint.color = Color.YELLOW
+        paint.textAlign = Paint.Align.RIGHT
+        // Position text.
+        canvas?.translate(columnTwo, textRow)
+        // Apply skew transformation.
+        canvas?.skew(0.2f, 0.3f)
+        canvas?.drawText(context.getString(R.string.skewed),
+            clipRectLeft, clipRectTop, paint)
+        canvas?.restore()
     }
 
     private fun drawQuickRejectExample(canvas: Canvas?) {
