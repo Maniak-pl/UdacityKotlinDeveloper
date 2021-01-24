@@ -118,7 +118,14 @@
         <item name="android:textSize">18sp</item>
     </style>
 
-    <!-- Lesson U3.4 -->
+    <!-- Lesson U4.3 -->
     <style name="MiniPaintTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+
+    <!-- Lesson U4.5 -->
+    <style name="PropertyAnimationTheme" parent="Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
 
 </resources>

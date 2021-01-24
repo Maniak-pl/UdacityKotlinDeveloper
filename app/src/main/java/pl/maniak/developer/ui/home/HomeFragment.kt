@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.FragmentHomeBinding
+import pl.maniak.developer.ui.udacity.animation.PropertyAnimation
 import pl.maniak.developer.ui.udacity.clipping.ClippingExample
 import pl.maniak.developer.ui.udacity.customfancontroller.CustomFanController
 import pl.maniak.developer.ui.udacity.dessertpusher.DessertPusherActivity
@@ -50,6 +51,7 @@ class HomeFragment : Fragment() {
             homeAppU12.setOnClickListener { startActivity(CustomFanController::class.java) }
             homeAppU13.setOnClickListener { startActivity(MiniPaintActivity::class.java) }
             homeAppU14.setOnClickListener { startActivity(ClippingExample::class.java) }
+            homeAppU15.setOnClickListener { startActivity(PropertyAnimation::class.java) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root

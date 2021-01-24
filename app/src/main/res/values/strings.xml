@@ -29,6 +29,7 @@
     <string name="app_title_12">Udacity - App \"Custom Fan Controller\"</string>
     <string name="app_title_13">Udacity - App \"Mini Paint\"</string>
     <string name="app_title_14">Udacity - App \"Clipping Example\"</string>
+    <string name="app_title_15">Udacity - App \"Property Animation\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     <!-- Lesson U2.2 -->
@@ -228,4 +229,12 @@
     <string name="clipping">Clipping</string>
     <string name="translated">translated text</string>
     <string name="skewed">"Skewed and "</string>
+
+    <!-- Lesson U4.5 -->
+    <string name="title_lesson_4.5">Property Animation</string>
+    <string name="rotate">Rotate</string>
+    <string name="translate">Translate</string>
+    <string name="scale">Scale</string>
+    <string name="fade">Fade</string>
+    <string name="shower">Shower</string>
 </resources>

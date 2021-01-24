@@ -65,4 +65,7 @@
     <dimen name="textOffset">20dp</dimen>
     <dimen name="strokeWidth">4dp</dimen>
     <dimen name="textSize">18sp</dimen>
+
+    <!-- Lesson U4.5 -->
+    <dimen name="standard_margin">8dp</dimen>
 </resources>
