@@ -21,6 +21,7 @@ import pl.maniak.developer.ui.udacity.gdgfinder.GdgFinderActivity
 import pl.maniak.developer.ui.udacity.guesstheword.GuessTheWordActivity
 import pl.maniak.developer.ui.udacity.marsrealestate.MarsRealEstateActivity
 import pl.maniak.developer.ui.udacity.minipaint.MiniPaintActivity
+import pl.maniak.developer.ui.udacity.motionlayout.MotionLayoutActivity
 import pl.maniak.developer.ui.udacity.trackmysleepquality.SleepQualityActivity
 import pl.maniak.developer.ui.udacity.trivia.TriviaActivity
 
@@ -52,6 +53,7 @@ class HomeFragment : Fragment() {
             homeAppU13.setOnClickListener { startActivity(MiniPaintActivity::class.java) }
             homeAppU14.setOnClickListener { startActivity(ClippingExample::class.java) }
             homeAppU15.setOnClickListener { startActivity(PropertyAnimation::class.java) }
+            homeAppU16.setOnClickListener { startActivity(MotionLayoutActivity::class.java) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root

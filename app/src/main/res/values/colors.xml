@@ -42,16 +42,26 @@
     <color name="text_black">#ff222222</color>
 
     <!-- Lesson U3.4 -->
-    <color name="primaryColor">#669df6</color>
-    <color name="primaryLightColor">#9cceff</color>
-    <color name="primaryDarkColor">#266fc3</color>
-    <color name="secondaryColor">#a142f4</color>
-    <color name="secondaryLightColor">#d774ff</color>
-    <color name="secondaryDarkColor">#6b00c0</color>
-    <color name="primaryTextColor">#000000</color>
-    <color name="secondaryTextColor">#ffffff</color>
+<!--    <color name="primaryColor">#669df6</color>-->
+<!--    <color name="primaryLightColor">#9cceff</color>-->
+<!--    <color name="primaryDarkColor">#266fc3</color>-->
+<!--    <color name="secondaryColor">#a142f4</color>-->
+<!--    <color name="secondaryLightColor">#d774ff</color>-->
+<!--    <color name="secondaryDarkColor">#6b00c0</color>-->
+<!--    <color name="primaryTextColor">#000000</color>-->
+<!--    <color name="secondaryTextColor">#ffffff</color>-->
 
     <!-- Lesson U4.3 -->
     <color name="colorBackground">#FFFF5500</color>
     <color name="colorPaint">#FFFFEB3B</color>
+
+    <!-- Lesson U4.6 -->
+    <color name="primaryColor">#263238</color>
+    <color name="primaryLightColor">#4f5b62</color>
+    <color name="primaryDarkColor">#000a12</color>
+    <color name="secondaryColor">#ff7043</color>
+    <color name="secondaryLightColor">#ffa270</color>
+    <color name="secondaryDarkColor">#c63f17</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
 </resources>
