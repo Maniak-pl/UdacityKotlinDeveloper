@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- A transition describes an animation via start and end state -->
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+        <!-- TODO: Define a Transition -->
+        <!-- TODO: Handle clicks -->
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/red_star" />
+        <!-- TODO: Define @id/start -->
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/red_star" />
+        <!-- TODO: Define @id/end -->
+    </ConstraintSet>
+</MotionScene>
