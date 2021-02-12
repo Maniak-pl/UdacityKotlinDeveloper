@@ -39,6 +39,7 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
         map.addMarker(MarkerOptions().position(work))
 
         setMapLongClick(map)
+        setPoiClick(map)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -81,6 +82,17 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
                 .position(latLng)
                 .title(getString(R.string.dropped_pin))
                 .snippet(snippet))
+        }
+    }
+
+    private fun setPoiClick(map: GoogleMap) {
+        map.setOnPoiClickListener { poi ->
+            val poiMarker = map.addMarker(
+                MarkerOptions()
+                    .position(poi.latLng)
+                    .title(poi.name)
+            )
+            poiMarker.showInfoWindow()
         }
     }
 }
