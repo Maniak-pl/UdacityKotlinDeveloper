@@ -12,6 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import pl.maniak.developer.R
+import java.util.*
 
 class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -30,12 +31,14 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
 
         val latitude = 50.06661269784586
-        val longitude =19.90595239683685
+        val longitude = 19.90595239683685
         val work = LatLng(latitude, longitude)
 
         val zoomLevel = 15f
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(work, zoomLevel))
         map.addMarker(MarkerOptions().position(work))
+
+        setMapLongClick(map)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -63,5 +66,21 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    private fun setMapLongClick(map: GoogleMap) {
+        map.setOnMapLongClickListener { latLng ->
+            // A Snippet is Additional text that's displayed below the title.
+            val snippet = String.format(
+                Locale.getDefault(),
+                "Lat: %1$.5f, Long: %2$.5f",
+                latLng.latitude,
+                latLng.longitude
+            )
+            map.addMarker(MarkerOptions()
+                .position(latLng)
+                .title(getString(R.string.dropped_pin))
+                .snippet(snippet))
+        }
     }
 }
