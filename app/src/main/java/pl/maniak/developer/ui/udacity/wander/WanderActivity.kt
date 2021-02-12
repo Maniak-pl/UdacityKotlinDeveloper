@@ -12,10 +12,14 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import pl.maniak.developer.R
+import com.google.android.gms.maps.model.MapStyleOptions
+import android.content.res.Resources
+import timber.log.Timber
 import java.util.*
 
 class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
 
+    private val TAG = WanderActivity::class.java.simpleName
     private lateinit var map: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +44,7 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setMapLongClick(map)
         setPoiClick(map)
+        setMapStyle(map)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -93,6 +98,24 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
                     .title(poi.name)
             )
             poiMarker.showInfoWindow()
+        }
+    }
+
+    private fun setMapStyle(map: GoogleMap) {
+        try {
+            // Customize the styling of the base map using a JSON object defined
+            // in a raw resource file.
+            val success = map.setMapStyle(
+                MapStyleOptions.loadRawResourceStyle(
+                    this,
+                    R.raw.map_style
+                )
+            )
+            if (!success) {
+                Timber.tag(TAG).e("Style parsing failed.")
+            }
+        } catch (e: Resources.NotFoundException) {
+            Timber.tag(TAG).e(e, "Can't find style. Error: ")
         }
     }
 }
