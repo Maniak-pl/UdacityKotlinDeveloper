@@ -9,10 +9,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MapStyleOptions
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 import pl.maniak.developer.R
 import timber.log.Timber
 import java.util.*
@@ -38,9 +35,15 @@ class WanderActivity : AppCompatActivity(), OnMapReadyCallback {
         val longitude = 19.90595239683685
         val work = LatLng(latitude, longitude)
 
-        val zoomLevel = 15f
+        val zoomLevel = 18f
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(work, zoomLevel))
         map.addMarker(MarkerOptions().position(work))
+
+        val overlaySize = 100f
+        val androidOverlay = GroundOverlayOptions()
+            .image(BitmapDescriptorFactory.fromResource(R.drawable.android_overlay))
+            .position(work, overlaySize)
+        map.addGroundOverlay(androidOverlay)
 
         setMapLongClick(map)
         setPoiClick(map)
