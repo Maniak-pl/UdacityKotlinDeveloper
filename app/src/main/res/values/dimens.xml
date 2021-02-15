@@ -68,4 +68,7 @@
 
     <!-- Lesson U4.5 -->
     <dimen name="standard_margin">8dp</dimen>
+
+    <!-- Lesson U5.2 -->
+    <dimen name="hint_text_size">24sp</dimen>
 </resources>

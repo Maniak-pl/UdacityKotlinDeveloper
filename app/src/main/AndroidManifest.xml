@@ -213,6 +213,14 @@
 
         <activity
             android:name=".ui.udacity.wander.WanderActivity"
-            android:label="@string/title_lesson_5.1"></activity>
+            android:label="@string/title_lesson_5.1"/>
+
+        <activity android:name=".ui.udacity.treasure.HuntMainActivity"
+            android:label="@string/title_lesson_5.2"
+            android:launchMode="singleInstance"/>
+
+        <receiver android:name=".ui.udacity.treasure.GeofenceBroadcastReceiver"/>
     </application>
+
+
 </manifest>
