@@ -71,4 +71,10 @@
 
     <!-- Lesson U5.2 -->
     <dimen name="hint_text_size">24sp</dimen>
+
+    <!-- Lesson U5.3 -->
+    <dimen name="list_item_padding">8dp</dimen>
+    <dimen name="header_height">192dp</dimen>
+    <dimen name="header_padding">16dp</dimen>
+    <dimen name="header_image_width">100dp</dimen>
 </resources>

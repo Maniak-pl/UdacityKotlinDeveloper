@@ -64,4 +64,10 @@
     <color name="secondaryDarkColor">#c63f17</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
+
+    <!-- Lesson U5.3 -->
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorGrey">#757575</color>
+    <drawable name="completedTaskBackground">#CCCCCC</drawable>
+    <drawable name="touchFeedback">#CFD8DC</drawable>
 </resources>

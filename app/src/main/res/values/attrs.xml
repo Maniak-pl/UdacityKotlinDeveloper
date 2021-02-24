@@ -5,4 +5,9 @@
         <attr name="fanColor2" format="color" />
         <attr name="fanColor3" format="color" />
     </declare-styleable>
+
+    <!-- Lesson U5.3 -->
+    <declare-styleable name="ScrollChildSwipeRefreshLayout">
+        <attr name="refreshing" format="boolean" />
+    </declare-styleable>
 </resources>

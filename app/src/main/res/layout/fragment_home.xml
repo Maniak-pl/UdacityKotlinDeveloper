@@ -100,6 +100,11 @@
                 android:text="@string/app_title_18" />
 
             <Button
+                android:id="@+id/homeAppU19"
+                style="@style/HomeButton"
+                android:text="@string/app_title_19" />
+
+            <Button
                 android:id="@+id/homeAppC01"
                 style="@style/HomeButton"
                 android:text="@string/app_title_C01" />

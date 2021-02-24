@@ -221,6 +221,11 @@
             android:launchMode="singleInstance"/>
 
         <receiver android:name=".ui.udacity.treasure.GeofenceBroadcastReceiver"/>
+
+        <activity android:name=".ui.udacity.todoapp.tasks.TasksActivity"
+            android:label="@string/title_lesson_5.3"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.OverlapSystemBar"/>
     </application>
 
 
