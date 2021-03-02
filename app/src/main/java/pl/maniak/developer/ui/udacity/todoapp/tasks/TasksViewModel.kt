@@ -1,6 +1,5 @@
 package pl.maniak.developer.ui.udacity.todoapp.tasks
 
-import android.app.Application
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.lifecycle.*
@@ -10,12 +9,11 @@ import pl.maniak.developer.ui.udacity.todoapp.Event
 import pl.maniak.developer.ui.udacity.todoapp.data.Result
 import pl.maniak.developer.ui.udacity.todoapp.data.Result.Success
 import pl.maniak.developer.ui.udacity.todoapp.data.Task
-import pl.maniak.developer.ui.udacity.todoapp.data.source.DefaultTasksRepository
 import pl.maniak.developer.ui.udacity.todoapp.data.source.TasksDataSource
+import pl.maniak.developer.ui.udacity.todoapp.data.source.TasksRepository
 
-class TasksViewModel(application: Application) : AndroidViewModel(application) {
+class TasksViewModel(private val tasksRepository: TasksRepository) : ViewModel() {
 
-    private val tasksRepository = DefaultTasksRepository.getRepository(application)
 
     private val _forceUpdate = MutableLiveData<Boolean>(false)
 
@@ -209,5 +207,13 @@ class TasksViewModel(application: Application) : AndroidViewModel(application) {
 
     fun refresh() {
         _forceUpdate.value = true
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    class TasksViewModelFactory(
+        private val tasksRepository: TasksRepository
+    ) : ViewModelProvider.NewInstanceFactory() {
+        override fun <T : ViewModel> create(modelClass: Class<T>) =
+            (TasksViewModel(tasksRepository) as T)
     }
 }

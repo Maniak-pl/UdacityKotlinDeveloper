@@ -12,14 +12,16 @@ import com.google.android.material.snackbar.Snackbar
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.TasksFragBinding
 import pl.maniak.developer.ui.udacity.todoapp.EventObserver
-import pl.maniak.developer.ui.udacity.todoapp.data.Task
+import pl.maniak.developer.ui.udacity.todoapp.data.source.DefaultTasksRepository
 import pl.maniak.developer.ui.udacity.todoapp.util.setupRefreshLayout
 import pl.maniak.developer.ui.udacity.todoapp.util.setupSnackbar
 import timber.log.Timber
 
 class TasksFragment : Fragment() {
 
-    private val viewModel by viewModels<TasksViewModel>()
+    private val viewModel by viewModels<TasksViewModel>() {
+        TasksViewModel.TasksViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+    }
 
     private val args: TasksFragmentArgs by navArgs()
 

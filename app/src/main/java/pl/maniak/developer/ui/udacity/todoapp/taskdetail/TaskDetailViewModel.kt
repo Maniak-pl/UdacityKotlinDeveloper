@@ -1,19 +1,16 @@
 package pl.maniak.developer.ui.udacity.todoapp.taskdetail
 
-import android.app.Application
 import androidx.annotation.StringRes
 import androidx.lifecycle.*
-import pl.maniak.developer.R
 import kotlinx.coroutines.launch
+import pl.maniak.developer.R
 import pl.maniak.developer.ui.udacity.todoapp.Event
 import pl.maniak.developer.ui.udacity.todoapp.data.Result
 import pl.maniak.developer.ui.udacity.todoapp.data.Result.Success
 import pl.maniak.developer.ui.udacity.todoapp.data.Task
-import pl.maniak.developer.ui.udacity.todoapp.data.source.DefaultTasksRepository
+import pl.maniak.developer.ui.udacity.todoapp.data.source.TasksRepository
 
-class TaskDetailViewModel(application: Application) : AndroidViewModel(application) {
-
-    private val tasksRepository = DefaultTasksRepository.getRepository(application)
+class TaskDetailViewModel(private val tasksRepository: TasksRepository) : ViewModel() {
 
     private val _taskId = MutableLiveData<String>()
 
@@ -95,5 +92,13 @@ class TaskDetailViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun showSnackbarMessage(@StringRes message: Int) {
         _snackbarText.value = Event(message)
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    class TaskDetailViewModelFactory(
+        private val tasksRepository: TasksRepository
+    ) : ViewModelProvider.NewInstanceFactory() {
+        override fun <T : ViewModel> create(modelClass: Class<T>) =
+            (TaskDetailViewModel(tasksRepository) as T)
     }
 }

@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.TaskdetailFragBinding
 import pl.maniak.developer.ui.udacity.todoapp.EventObserver
+import pl.maniak.developer.ui.udacity.todoapp.data.source.DefaultTasksRepository
 import pl.maniak.developer.ui.udacity.todoapp.tasks.DELETE_RESULT_OK
 import pl.maniak.developer.ui.udacity.todoapp.util.setupRefreshLayout
 import pl.maniak.developer.ui.udacity.todoapp.util.setupSnackbar
@@ -19,7 +20,10 @@ class TaskDetailFragment : Fragment() {
 
     private val args: TaskDetailFragmentArgs by navArgs()
 
-    private val viewModel by viewModels<TaskDetailViewModel>()
+    private val viewModel by viewModels<TaskDetailViewModel>() {
+        TaskDetailViewModel.TaskDetailViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+    }
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
