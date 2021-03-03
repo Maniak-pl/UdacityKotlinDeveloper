@@ -7,6 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
+import pl.maniak.developer.App
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.TaskdetailFragBinding
 import pl.maniak.developer.ui.udacity.todoapp.EventObserver
@@ -21,7 +22,7 @@ class TaskDetailFragment : Fragment() {
     private val args: TaskDetailFragmentArgs by navArgs()
 
     private val viewModel by viewModels<TaskDetailViewModel>() {
-        TaskDetailViewModel.TaskDetailViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+        TaskDetailViewModel.TaskDetailViewModelFactory((requireContext().applicationContext as App).taskRepository)
     }
 
 

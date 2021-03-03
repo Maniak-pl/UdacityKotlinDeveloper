@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import pl.maniak.developer.App
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.TasksFragBinding
 import pl.maniak.developer.ui.udacity.todoapp.EventObserver
@@ -20,7 +21,7 @@ import timber.log.Timber
 class TasksFragment : Fragment() {
 
     private val viewModel by viewModels<TasksViewModel>() {
-        TasksViewModel.TasksViewModelFactory(DefaultTasksRepository.getRepository(requireActivity().application))
+        TasksViewModel.TasksViewModelFactory((requireContext().applicationContext as App).taskRepository)
     }
 
     private val args: TasksFragmentArgs by navArgs()

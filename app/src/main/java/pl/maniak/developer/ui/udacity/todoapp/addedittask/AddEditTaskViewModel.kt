@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import pl.maniak.developer.App
 import pl.maniak.developer.R
 import pl.maniak.developer.ui.udacity.todoapp.Event
 import pl.maniak.developer.ui.udacity.todoapp.data.Result.Success
@@ -16,7 +17,7 @@ class AddEditTaskViewModel(application: Application) : AndroidViewModel(applicat
 
     // Note, for testing and architecture purposes, it's bad practice to construct the repository
     // here. We'll show you how to fix this during the codelab
-    private val tasksRepository = DefaultTasksRepository.getRepository(application)
+    private val tasksRepository = (application as App).taskRepository
 
     // Two-way databinding, exposing MutableLiveData
     val title = MutableLiveData<String>()

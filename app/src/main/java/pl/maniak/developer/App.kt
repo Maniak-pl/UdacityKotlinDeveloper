@@ -7,12 +7,16 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import pl.maniak.developer.ui.udacity.devbyteviewer.work.RefreshDataWorker
+import pl.maniak.developer.ui.udacity.todoapp.ServiceLocator
+import pl.maniak.developer.ui.udacity.todoapp.data.source.TasksRepository
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
 class App : Application() {
 
     private val applicationScope = CoroutineScope(Dispatchers.Default)
+    val taskRepository: TasksRepository
+        get() = ServiceLocator.provideTasksRepository(this)
 
     override fun onCreate() {
         super.onCreate()
