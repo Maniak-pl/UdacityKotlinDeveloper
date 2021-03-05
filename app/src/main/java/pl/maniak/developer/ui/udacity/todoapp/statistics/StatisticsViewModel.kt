@@ -1,18 +1,15 @@
 package pl.maniak.developer.ui.udacity.todoapp.statistics
 
-import android.app.Application
 import androidx.lifecycle.*
 import kotlinx.coroutines.launch
-import pl.maniak.developer.App
 import pl.maniak.developer.ui.udacity.todoapp.data.Result
 import pl.maniak.developer.ui.udacity.todoapp.data.Result.Error
 import pl.maniak.developer.ui.udacity.todoapp.data.Result.Success
 import pl.maniak.developer.ui.udacity.todoapp.data.Task
-import pl.maniak.developer.ui.udacity.todoapp.data.source.DefaultTasksRepository
+import pl.maniak.developer.ui.udacity.todoapp.data.source.TasksRepository
 
-class StatisticsViewModel(application: Application) : AndroidViewModel(application) {
+class StatisticsViewModel(private val tasksRepository: TasksRepository) : ViewModel() {
 
-    private val tasksRepository = (application as App).taskRepository
 
     private val tasks: LiveData<Result<List<Task>>> = tasksRepository.observeTasks()
     private val _dataLoading = MutableLiveData<Boolean>(false)
@@ -38,5 +35,13 @@ class StatisticsViewModel(application: Application) : AndroidViewModel(applicati
             tasksRepository.refreshTasks()
             _dataLoading.value = false
         }
+    }
+
+    @Suppress("UNCHECKED_CAST")
+    class StatisticsViewModelFactory (
+        private val tasksRepository: TasksRepository
+    ) : ViewModelProvider.NewInstanceFactory() {
+        override fun <T : ViewModel> create(modelClass: Class<T>) =
+            (StatisticsViewModel(tasksRepository) as T)
     }
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import pl.maniak.developer.App
 import pl.maniak.developer.R
 import pl.maniak.developer.databinding.StatisticsFragBinding
 import pl.maniak.developer.ui.udacity.todoapp.util.setupRefreshLayout
@@ -16,7 +17,11 @@ class StatisticsFragment : Fragment() {
 
     private lateinit var viewDataBinding: StatisticsFragBinding
 
-    private val viewModel by viewModels<StatisticsViewModel>()
+    private val viewModel by viewModels<StatisticsViewModel> {
+        StatisticsViewModel.StatisticsViewModelFactory(
+            (requireContext().applicationContext as App).taskRepository
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
