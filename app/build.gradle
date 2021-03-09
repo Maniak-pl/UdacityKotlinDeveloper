@@ -2,8 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-parcelize'
-apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'com.google.gms.google-services'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 30
@@ -59,6 +59,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
     implementation 'androidx.preference:preference-ktx:1.1.1'
+
+    // Firebase
+    implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
 
     // Local unit tests
     testImplementation 'junit:junit:4.13.1'
@@ -135,6 +138,4 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:18.0.0'
 
-    // Firebase
-    implementation 'com.firebaseui:firebase-ui-auth:5.0.0'
 }
