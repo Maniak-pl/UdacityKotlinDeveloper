@@ -34,6 +34,7 @@
     <string name="app_title_17">Udacity - App \"Wander\"</string>
     <string name="app_title_18">Udacity - App \"Treasure Hunt\"</string>
     <string name="app_title_19">Udacity - App \"Todo\"</string>
+    <string name="app_title_20">Udacity - App \"Firebase Login Sample\"</string>
     <string name="app_title_C01">CoreLogic - App \"ConstraintLayout\"</string>
 
     <!-- Lesson U2.2 -->
@@ -355,4 +356,19 @@
     <string name="no_data_description" />
     <string name="tasks_header_image_content_description">Tasks header image</string>
     <string name="no_tasks_image_content_description">No tasks image</string>
+
+    <!-- Lesson U5.4 -->
+    <string name="title_lesson_5.4">Firebase Login Sample</string>
+    <string name="login_button_text">Login</string>
+    <string name="logout_button_text">Logout</string>
+    <string name="login_unsuccessful_msg">Login unsuccessful</string>
+    <string name="welcome_message">It\'s currently %1$s.</string>
+    <string name="welcome_message_authed">Hi %1$s! Did you know that %2$s.</string>
+    <string name="login_prompt">Login to set customizations!</string>
+    <string name="login_btn">Login</string>
+    <string name="settings_btn">Settings</string>
+    <string name="settings_fact_type_title">Fun Fact Type</string>
+    <string name="fact_type_android">Android</string>
+    <string name="fact_type_california">California</string>
+    <string name="preference_fact_type_key">fact_type_pref</string>
 </resources>

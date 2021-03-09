@@ -17,6 +17,7 @@ import pl.maniak.developer.ui.udacity.customfancontroller.CustomFanController
 import pl.maniak.developer.ui.udacity.dessertpusher.DessertPusherActivity
 import pl.maniak.developer.ui.udacity.devbyteviewer.ui.DevByteActivity
 import pl.maniak.developer.ui.udacity.eggtimernotifications.EggTimerActivity
+import pl.maniak.developer.ui.udacity.firebase.FirebaseActivity
 import pl.maniak.developer.ui.udacity.gdgfinder.GdgFinderActivity
 import pl.maniak.developer.ui.udacity.guesstheword.GuessTheWordActivity
 import pl.maniak.developer.ui.udacity.marsrealestate.MarsRealEstateActivity
@@ -60,6 +61,7 @@ class HomeFragment : Fragment() {
             homeAppU17.setOnClickListener { startActivity(WanderActivity::class.java) }
             homeAppU18.setOnClickListener { startActivity(HuntMainActivity::class.java) }
             homeAppU19.setOnClickListener { startActivity(TasksActivity::class.java) }
+            homeAppU20.setOnClickListener { startActivity(FirebaseActivity::class.java) }
             homeAppC01.setOnClickListener { findNavController().navigate(R.id.action_nav_home_to_constraintLayoutFragment) }
         }
         return binding.root

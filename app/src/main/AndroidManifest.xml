@@ -226,6 +226,9 @@
             android:label="@string/title_lesson_5.3"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.OverlapSystemBar"/>
+
+        <activity android:name=".ui.udacity.firebase.FirebaseActivity"
+            android:label="@string/title_lesson_5.4"/>
     </application>
 
 
